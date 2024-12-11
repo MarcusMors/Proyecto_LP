@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AQP Chat</title>
+  <link rel="icon" href="images/chat.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/newchat.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="images/chat.png" alt="Logo">
+      <div class="title">
+        <h2><b>AQP Chat</b></h2>
+      </div>
+    </div>
+    <button class="logout-button" onclick="logout()">
+      <h2><b>Logout</b></h2>
+    </button>
+  </div>
+  <div id="output"></div>
+  <div class="container">
+
+    <div class="section" id="message-section">
+      <h2>Messages</h2>
+      <div id="message-container"></div>
+      <div id="message-box-wrapper">
+        <input id="message-box-input" type="text" required placeholder="Type your message..."
+          onkeypress="checkEnterMessage(event)">
+        <button id="message-box-send-button" onclick="sendMessage()">Send Message</button>
+      </div>
+    </div>
+
+    <div class="section" id="panel_section">
+      <div id="connection-status" class="connection-status disconnected">
+        <h2><b>Disconnected</b></h2>
+      </div>
+
+      <div id="room-section">
+        <h2>Room Selection</h2>
+
+        <div><input type="text" id="join-room-input" placeholder="Enter Room Name" value="default"></div>
+        <button id="join-room-button" onclick="joinRoom()">Join Room</button>
+
+      </div>
+
+      <div id="create-room-section">
+        <h2>Create New Room</h2>
+        <div><input type="text" id="create-room-input" placeholder="Enter Room Name"></div>
+        <button id="create-room-button" onclick="createRoom()">Create Room</button>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+  <script src="js/chat.js"></script>
+</body>
+
+</html>
