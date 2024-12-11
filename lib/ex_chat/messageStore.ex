@@ -16,7 +16,10 @@ defmodule ExChat.MessageStore do
 
   def print_messages(room) do
     messages = get_messages(room)
-    IO.puts("Messages for room #{room}:")
+    IO.puts("Messages for group #{room}:")
+    # Enum.reverse(messages) |> Enum.each(messages,
+    #   &IO.puts("#{elem(&1, 0)}: #{elem(&1, 1)}")
+    # )
     Enum.each(messages, &IO.puts("#{elem(&1, 0)}: #{elem(&1, 1)}"))
   end
 

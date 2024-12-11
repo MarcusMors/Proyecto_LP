@@ -74,7 +74,7 @@ body {
 }
 
 .user-message {
-  background-color: #2ecc71; /* Mensajes del usuario actual (color verde) */
+  background-color: #3498db; /* Mensajes del usuario actual (color azul) */
   color: #fff;
   text-align: right;
   align-self: flex-end; /* Alinear los mensajes del usuario a la derecha */
@@ -82,14 +82,15 @@ body {
 
 
 .other-user-message {
-  background-color: #3498db; /* Mensajes de otros usuarios (color azul) */
+  background-color: #849fb1; /* Mensajes de otros usuarios (color gris oscuro) */
   color: #fff;
   text-align: left;
+  align-self: flex-start;
 }
 
 #panel_section{
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: space-around;
   align-items: center;
 }
@@ -104,18 +105,32 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+.message-section-container{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+/* .message-section-container */
 
 #message-container {
-  flex: 1;
+  /* flex: 1; */
   overflow-y: auto;
   border-bottom: 1px solid #ccc;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .room {
-  align-items: flex-start;
-  display: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* align-items: self-start; */
+  /* align-items: flex-end; */
+  /* justify-content: flex-start; */
+  
 }
 
 #message-box-wrapper {
@@ -157,7 +172,7 @@ button {
 
 #create-room-button,
 #message-box-send-button {
-  background-color: #2ecc71;
+  background-color: #1c98f7;
   color: #fff;
 }
 

@@ -23,14 +23,17 @@
   </div>
   <div id="output"></div>
   <div class="container">
-
     <div class="section" id="message-section">
       <h2>Messages</h2>
-      <div id="message-container"></div>
-      <div id="message-box-wrapper">
-        <input id="message-box-input" type="text" required placeholder="Type your message..."
-          onkeypress="checkEnterMessage(event)">
-        <button id="message-box-send-button" onclick="sendMessage()">Send Message</button>
+      <!-- <div class="section" id="message-section"> -->
+      <div class="message-section-container">
+
+        <div id="message-container"></div>
+        <div id="message-box-wrapper">
+          <input id="message-box-input" type="text" required placeholder="Type your message..."
+            onkeypress="checkEnterMessage(event)">
+          <button id="message-box-send-button" onclick="sendMessage()">Send Message</button>
+        </div>
       </div>
     </div>
 
@@ -40,17 +43,17 @@
       </div>
 
       <div id="room-section">
-        <h2>Room Selection</h2>
+        <h2>Select Group</h2>
 
-        <div><input type="text" id="join-room-input" placeholder="Enter Room Name" value="default"></div>
-        <button id="join-room-button" onclick="joinRoom()">Join Room</button>
+        <div><input type="text" id="join-room-input" placeholder="Enter Group Name" value="my_group"></div>
+        <button id="join-room-button" onclick="joinRoom()">Join</button>
 
       </div>
 
       <div id="create-room-section">
-        <h2>Create New Room</h2>
-        <div><input type="text" id="create-room-input" placeholder="Enter Room Name"></div>
-        <button id="create-room-button" onclick="createRoom()">Create Room</button>
+        <h2>Create Group</h2>
+        <div><input type="text" id="create-room-input" placeholder="Enter Group Name"></div>
+        <button id="create-room-button" onclick="createRoom()">Create</button>
       </div>
 
     </div>
